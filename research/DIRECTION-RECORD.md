@@ -21,7 +21,7 @@ Reused the REA reference library and reviewed individual MotionSites/X evidence 
 - Two: dark relationship opening → four responsibility columns and explicit deal-making boundary → light data boundary → dark institutional choices → contact.
 - Three: wide typographic editorial opening and chapter index → blue school-role reading sequence → quiet data comparison → independent ruled licensing columns → contact.
 - Document layers rotate/translate subtly with normal document scroll, reversing immediately. Network rings expand 6–9% across hero travel. No fake video is claimed.
-- Workflow paragraphs progress from opacity .55 to 1 and translate 22px to 0 as they reach the reading area. Held context is disabled below 700px. All actual text exists before animation; reduced motion resets transforms and all opacity, with no-JS content available.
+- Workflow paragraphs progress from opacity .8 to 1 and translate 22px to 0 as they reach the reading area. Held context is disabled below 700px. All actual text exists before animation; reduced motion resets transforms and all opacity, with no-JS content available.
 - Data comparison swaps exact field lists with a 400ms, 50ms stagger. Buttons have aria-pressed and a live result region. Dates, forms and pricing claims are not animated or fabricated.
 
 ## Company claims

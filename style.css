@@ -6,3 +6,4 @@
 /* Direction 02: observed Network Hero concentric relationship map, adapted to defined school roles. */
 .two .orbit{transform:translate(-50%,-50%);box-shadow:none;width:350px;height:350px;border-color:#9cbbe845}.two .orbit-b{width:460px;height:460px}.two .orbit-c{width:240px;height:240px}.two .core{border:0;background:none;box-shadow:none;border-radius:0;width:190px;height:120px}.two .core span{font-size:65px}.two .core small{font-size:12px}.two .l1{top:7%;left:24%}.two .l2{top:42%;right:-1%}.two .l3{bottom:10%;left:22%}.two .l4{top:53%;left:-4%}
 @media(max-width:700px){.two .orbit{width:260px;height:260px}.two .orbit-b{width:330px;height:330px}.two .orbit-c{width:175px;height:175px}.two .core span{font-size:50px}.two .core small{font-size:10px}.two .l2{right:0}.two .l4{left:0}}
+@media(max-width:700px){.hero-one h1,.two h1,.three h1{font-size:clamp(42px,14vw,56px)}}

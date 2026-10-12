@@ -1,0 +1,281 @@
+[
+  {
+    "route": "one",
+    "width": 320,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -143, -134.4)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(0.999107, 0.0422516, -0.0422516, 0.999107, -143, -151.981)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -143, -134.4)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "two",
+    "width": 320,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, -130, -130)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(1.02786, 0, 0, 1.02786, -130, -130)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, -130, -130)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "three",
+    "width": 320,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.8"
+    },
+    "middle": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.800776"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "one",
+    "width": 390,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -143, -134.4)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(0.998996, 0.0448082, -0.0448082, 0.998996, -143, -151.418)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -143, -134.4)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "two",
+    "width": 390,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, -130, -130)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(1.02886, 0, 0, 1.02886, -130, -130)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, -130, -130)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "three",
+    "width": 390,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.8"
+    },
+    "middle": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.800778"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "one",
+    "width": 1024,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -170.5, -168)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(0.999724, 0.0235113, -0.0235113, 0.999724, -170.5, -195.133)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -170.5, -168)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "two",
+    "width": 1024,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, -175, -175)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(1.03015, 0, 0, 1.03015, -175, -175)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, -175, -175)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "three",
+    "width": 1024,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.8"
+    },
+    "middle": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.800785"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "one",
+    "width": 1440,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -198, -168)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(0.999724, 0.0235113, -0.0235113, 0.999724, -198, -195.133)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(0.992546, 0.121869, -0.121869, 0.992546, -198, -168)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "two",
+    "width": 1440,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, -175, -175)",
+      "opacity": "1"
+    },
+    "middle": {
+      "transform": "matrix(1.03015, 0, 0, 1.03015, -175, -175)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, -175, -175)",
+      "opacity": "1"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "three",
+    "width": 1440,
+    "overflow": false,
+    "headingOverflow": false,
+    "start": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.8"
+    },
+    "middle": {
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "opacity": "1"
+    },
+    "reverse": {
+      "transform": "matrix(1, 0, 0, 1, 0, 22)",
+      "opacity": "0.800777"
+    },
+    "reduced": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  {
+    "route": "one",
+    "noJS": true,
+    "steps": 4
+  },
+  {
+    "route": "two",
+    "noJS": true,
+    "steps": 4
+  },
+  {
+    "route": "three",
+    "noJS": true,
+    "steps": 4
+  }
+]
