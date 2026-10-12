@@ -1,0 +1,227 @@
+[
+  {
+    "route": "one",
+    "name": "desktop",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "two",
+    "name": "desktop",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "three",
+    "name": "desktop",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "one",
+    "name": "tablet",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "two",
+    "name": "tablet",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "three",
+    "name": "tablet",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "one",
+    "name": "phone",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "two",
+    "name": "phone",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  },
+  {
+    "route": "three",
+    "name": "phone",
+    "control": true,
+    "state": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "reverse": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "reduced": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "overflow": false,
+    "images": true
+  }
+]
