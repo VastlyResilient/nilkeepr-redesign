@@ -58,7 +58,7 @@
     },
     "reverse": {
       "transform": "matrix(1, 0, 0, 1, 0, 22)",
-      "opacity": "0.800776"
+      "opacity": "0.8"
     },
     "reduced": {
       "opacity": "1",
@@ -124,7 +124,7 @@
     },
     "reverse": {
       "transform": "matrix(1, 0, 0, 1, 0, 22)",
-      "opacity": "0.800778"
+      "opacity": "0.800781"
     },
     "reduced": {
       "opacity": "1",
@@ -186,11 +186,11 @@
     },
     "middle": {
       "transform": "matrix(1, 0, 0, 1, 0, 0)",
-      "opacity": "1"
+      "opacity": "0.999224"
     },
     "reverse": {
       "transform": "matrix(1, 0, 0, 1, 0, 22)",
-      "opacity": "0.800785"
+      "opacity": "0.800784"
     },
     "reduced": {
       "opacity": "1",
@@ -256,7 +256,7 @@
     },
     "reverse": {
       "transform": "matrix(1, 0, 0, 1, 0, 22)",
-      "opacity": "0.800777"
+      "opacity": "0.80078"
     },
     "reduced": {
       "opacity": "1",

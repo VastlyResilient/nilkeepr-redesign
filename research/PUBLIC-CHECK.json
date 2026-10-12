@@ -1,0 +1,36 @@
+[
+  {
+    "file": "index.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "file": "one.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "file": "two.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "file": "three.html",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "file": "style.css",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "file": "app.js",
+    "status": 200,
+    "matches": true
+  },
+  {
+    "publicInteraction": true,
+    "overflow": false
+  }
+]
