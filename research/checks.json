@@ -1,0 +1,65 @@
+[
+  {
+    "route": "one",
+    "name": "desktop",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "two",
+    "name": "desktop",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "three",
+    "name": "desktop",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "one",
+    "name": "tablet",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "two",
+    "name": "tablet",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "three",
+    "name": "tablet",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "one",
+    "name": "phone",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "two",
+    "name": "phone",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  },
+  {
+    "route": "three",
+    "name": "phone",
+    "overflow": false,
+    "privateOk": true,
+    "visibleOk": true
+  }
+]
