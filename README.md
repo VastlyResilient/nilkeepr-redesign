@@ -1,13 +1,9 @@
-# NILKEEPr school-compliance design directions
+# NILKEEPR school-compliance cinematic redesign
 
-Three responsive interactive direction previews. Not a completed public-site migration or operational compliance product.
+Published at https://vastlyresilient.github.io/nilkeepr-redesign/.
 
-- `one.html`: The clear record
-- `two.html`: The protection network
-- `three.html`: The school field guide
+The home page uses a generated eight-second 2K film, delivered as matched desktop and portrait WebP sequences. Native scrolling controls the frames and staged HTML. A still preference is available inside the menu. Source-company explainer, captions, and transcript remain distinct from conceptual artwork.
 
-Open the GitHub Pages index or run `python3 -m http.server 4213 --bind 127.0.0.1` in this folder.
+The school-service journey includes platform, data/consent, About, Contact and source policy pages. The contact form opens an email draft; it does not submit to a backend. Authentication and account privacy controls remain genuine external integrations.
 
-Public company facts/assets were inspected on 12 October 2026. Reference provenance, scope and unresolved integration requirements are in `research/DIRECTION-RECORD.md`. No additional paid video was generated. Existing company logo retained; illustrative diagrams do not depict the live product.
-
-Fonts: Montserrat and Inter served locally under their included OFL licenses, matching observed source families. No tracking or form submission backend. Contact actions launch the visitor's email client or phone dialer.
+`cinematic.css` and `cinematic.js` are the shared runtime. `scripts/verify-cinematic.mjs` checks frame progression/reversal, interaction states, and responsive content. `scripts/resilience-film.mjs` covers Chromium/WebKit, failed frame fallback, no-JS and explicit still preference. Research/source ledgers and generation receipts remain local and are not distributed with the site.

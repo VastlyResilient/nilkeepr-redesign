@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vastlyresilient.github.io/nilkeepr-redesign/sitemap.xml

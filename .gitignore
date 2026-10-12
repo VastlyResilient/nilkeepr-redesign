@@ -5,3 +5,13 @@ research/*-source.json
 archive/
 assets/*-scene.png
 research/*-run.log
+production/
+research/current-*.json
+research/MIGRATION-CONTENT.json
+research/CONTENT-REVIEW-FILM.json
+research/about.json
+research/contact.json
+research/home.json
+research/school-admin-pricing.json
+research/school-compliance.json
+scripts/__pycache__/
