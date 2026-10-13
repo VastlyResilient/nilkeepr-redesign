@@ -11,3 +11,23 @@
 @media(max-width:700px){.inner:has(.policy-source-note) .page-opening h1{font-size:clamp(30px,8.5vw,38px);overflow-wrap:normal}}
 @media(max-aspect-ratio:1/1){.film-poster{object-position:85% center}}
 .film-caption{text-shadow:0 1px 3px #031323,0 0 7px #031323;color:#edf3fa}.film-copy h1{text-shadow:0 2px 14px #03132324}
+/* Readability repair: preserve company fonts, release overly compressed glyph spacing. */
+h1,h2,h3{letter-spacing:-.025em;line-height:1.12}
+.film-copy h1{font-size:clamp(54px,7.1vw,110px);line-height:1.12;text-shadow:none}
+.film-copy em{color:#e0e8f2}
+.reading-document h2,.menu-layout nav a{letter-spacing:-.02em}
+.scope-word{letter-spacing:-.035em}
+.role-chapter{opacity:1!important}
+.film-intro{color:#fff;text-shadow:0 1px 4px #031323}
+.film-caption{font-size:12px;line-height:1.5}
+@media(max-width:700px){
+ .film-copy h1{font-size:clamp(36px,9.7vw,48px);line-height:1.14}
+ .film-intro{font-size:16px;line-height:1.6}
+ .film-caption{font-size:11px;gap:14px;bottom:22px;align-items:start}
+ .film-caption span{flex:1;min-width:0}
+ .reading-document p,.about-split p,.audience-list p,.faq p{font-size:16px;line-height:1.75}
+ .footer-meta,.footer-legal,.form-note{font-size:12px}
+ .art-credit{font-size:11px}
+}
+@media(max-width:700px){.film-intro{max-width:335px;text-wrap:pretty}.film-copy .eyebrow{font-size:10px}.role-chapter p:last-child{font-size:16px;line-height:1.7}}
+@media(max-width:700px){.page-opening h1{font-size:clamp(32px,10vw,42px);overflow-wrap:normal;line-height:1.15}.inner:has(.policy-source-note) .page-opening h1{font-size:clamp(30px,8.5vw,38px)}}
