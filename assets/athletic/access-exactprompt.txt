@@ -1,0 +1,23 @@
+Use case: product-mockup.
+Create one finished editorial photographic raster for NILKEEPR's athletic index website identity. Landscape 4:3, nearly top-down camera, a genuine crisp white printed information sheet on finely brushed silver metal tabletop. Small navy athletic fabric edge just visible at the boundary. Paper fills approximately 88% of the image, fully legible, almost level, restrained cobalt blue binder clip at the top margin without covering type. Natural directional daylight, realistic very fine paper thickness and subtle contact shadows, tangible paper and brushed metal texture, premium blue/white/silver athletic identity. This must look like a photographed printed communication sheet, not a product screen or blank paper.
+
+The paper is clean editorial design, disciplined typographic grid, cobalt rules, dark navy sans serif type. Large NILKEEPR wordmark at top, main title CONSENT & ACCESS. Under title a top consent strip featuring Parent or guardian consent with three separate short labels: Recorded, Timestamped, Revocable. Under strip, two clear generously spaced columns with equal visual prominence: left heading SCHOOL VIEW and three lines Disclosure summaries / Reported eligibility / Consent status. Right heading KEPT PRIVATE and three lines Financial accounts / Private messages / Exact compensation. Small bottom footer Illustrative overview. Strong hierarchy, precise readable typography at this viewing size.
+
+All and ONLY the following exact words may appear in the entire image. Render each phrase once, spelled exactly:
+"NILKEEPR"
+"CONSENT & ACCESS"
+"Parent or guardian consent"
+"Recorded"
+"Timestamped"
+"Revocable"
+"SCHOOL VIEW"
+"Disclosure summaries"
+"Reported eligibility"
+"Consent status"
+"KEPT PRIVATE"
+"Financial accounts"
+"Private messages"
+"Exact compensation"
+"Illustrative overview"
+
+No additional text, numbers, names, personal identities, signatures, fake record values, lorem ipsum, claims that schools approve deals, screens, or watermarks. This is an illustrative overview of access boundaries, not an actual signed record. Preserve the exact wording. Photorealistic paper photography, refined editorial graphic design.

@@ -1,0 +1,26 @@
+Use case: product-mockup.
+Create one finished photorealistic editorial asset for NILKEEPR's athletic index identity. Landscape 4:3. Nearly top-down view of an open restrained navy binder on a clean finely brushed silver metal scorer's table. One single white printed page fills most of the frame and is fully readable; polished real binder rings appear along the left margin, with realistic paper thickness, material detail, contact shadows, and directional natural light. Athletic institutional communication, blue/white/silver palette, premium controlled art direction. No extra props.
+
+The single page is a purposeful printed oversight framework, not a filled personal record or product screenshot. Disciplined editorial typography: dark navy sans serif, restrained cobalt headings, fine horizontal rules making a clear ordered list, fine vertical column dividers that create a narrow blank graphic margin without field labels, no numbers. Brand wordmark NILKEEPR at top, then OVERSIGHT RECORD. Below, a clean large readable six-row list in exactly this sequence:
+Disclosure history
+Consent record
+Logged school access
+Incident documentation
+Compliance summary
+Report export
+Below list, For institutional review. Small footer Illustrative overview.
+Keep the sheet near level, generous but compact padding, all words razor clear. Maintain realistic photographic paper texture and subtle shadows.
+
+All and ONLY the following exact phrases may appear, each once:
+"NILKEEPR"
+"OVERSIGHT RECORD"
+"Disclosure history"
+"Consent record"
+"Logged school access"
+"Incident documentation"
+"Compliance summary"
+"Report export"
+"For institutional review"
+"Illustrative overview"
+
+No icons, fake timestamps, invented numbers, IDs, names, signatures, blank form fields pretending to be a completed record, additional words, lorem ipsum, watermarks, or screenshots. The list represents documentation categories, not actual entries. Exact spelling mandatory.

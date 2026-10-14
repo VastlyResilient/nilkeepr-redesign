@@ -1,0 +1,1254 @@
+{
+  "index": [
+    {
+      "tag": "section",
+      "class": [
+        "ath-index"
+      ],
+      "motion": "index"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-role-track"
+      ],
+      "motion": "roles"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-document-story"
+      ],
+      "motion": "document"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "capability-lab"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image",
+        "ath-tool-art"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "explainer",
+        "section",
+        "record-explainer"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-access-art"
+      ],
+      "motion": "document"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "access-section"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "boundary-banner"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "licensing",
+        "section"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "platform": [
+    {
+      "tag": "section",
+      "class": [
+        "ath-opening"
+      ],
+      "motion": "opening"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-index"
+      ],
+      "motion": "index"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "a",
+      "class": [
+        "ath-index-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-role-track"
+      ],
+      "motion": "roles"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-document-story"
+      ],
+      "motion": "document"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [
+        "ath-capability-row"
+      ],
+      "motion": "row"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "data-and-consent": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening",
+        "ath-data-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "scope-pair"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "about": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening",
+        "about-opening",
+        "ath-about-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-about-document"
+      ],
+      "motion": "document"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "article",
+      "class": [],
+      "motion": "row"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "contact": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "figure",
+      "class": [
+        "ath-image",
+        "ath-contact-art"
+      ],
+      "motion": "image"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "privacy": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "terms": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "communications-consent": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "email-policy": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "ath-reading-chapter"
+      ],
+      "motion": "chapter"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "transcript": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ],
+  "404": [
+    {
+      "tag": "section",
+      "class": [
+        "page-opening"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "section",
+      "class": [
+        "inner-content"
+      ],
+      "motion": "section"
+    },
+    {
+      "tag": "footer",
+      "class": [
+        "site-footer",
+        "record-footer"
+      ],
+      "motion": "footer"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    },
+    {
+      "tag": "div",
+      "class": [],
+      "motion": "footer-column"
+    }
+  ]
+}

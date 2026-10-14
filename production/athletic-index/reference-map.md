@@ -1,0 +1,10 @@
+# Selected evidence and feature bindings
+- Primary owner-approved option2: ../product-design-redesign/02-athletic-index.png. Exact visual composition target: court hero with condensed heading, full-width ruled service rows, three-role typographic stage, paired access lists. Static source, no intrinsic animation settings.
+- Monodrift: https://monodrift.framer.website/ . Saved dossier refs/framer33-monodrift/dossier.md and compare/08–11-manifesto*.jpg inspected; source-derived progress and reversible statement behavior. Adaptation: all three NIL roles remain readable; bounded 170vh desktop/normal flow phone instead of450vh. No mint, Tektur, marquees, false metrics, or borrowed brand facade.
+- Brightedge: https://brightedge.framer.website/ . Saved live index screenshot production/product-design-redesign/brightedge-index.jpg and prior observed ruled rows; adapted for capability names/descriptions. Timing estimated, not private editor values.
+- X015: https://x.com/pixelcave_john/status/2100175297282715989 / https://codedvisuals.com/visuals/status/resource-monitor . Saved two-state monitor evidence shows stable contextual frame and meaningful content change. Adapted to capability selection and accurate document artwork. Not its CPU graphics or exact unverified easing.
+- MotionSites Neo Museum motion095 saved frames support object/material photographic inspection only; option2 replaces its gallery composition. Do not claim a newly observed live animation.
+- Typography provenance: https://github.com/google/fonts/tree/main/ofl/anton . OFL saved with local font. Original generated mock font cannot be identified exactly.
+
+## Image contract
+Every image has a named communication job, exact approved vocabulary, camera/crop/lighting/material plan, semantic reading hierarchy and excluded false details. Inspect words character-by-character and inspect actual site crops. Blank props are not adequate content illustrations. Printed explanatory records use source-supported fields, not invented people, amounts, timestamps, approval status or app UI. Keep essential information in HTML as well.
