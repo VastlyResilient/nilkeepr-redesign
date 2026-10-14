@@ -1,12 +1,12 @@
-# Athletic Index — option 2
+# Design QA — Monodrift NILKEEPR
 
-All eleven canonical routes rebuilt. Approved homepage film/runtime/assets preserved. Four new image sets: court context, disclosure overview, consent/access, oversight record. Exact text prompts retained beside assets. All depict illustrative concepts, not actual product screenshots or client records; matching information remains HTML and full-resolution images open on selection.
+PASS with disclosed evidence limits. All identified blocking rendered findings repaired and independently rechecked. Current capture set includes11routes at3viewport sizes, plus menu, expertise, process, dialog, manifesto forward/reverse holds and repaired reading layouts.
 
-## Motion
-Every content section has a motion assignment in motion-coverage.json. Ruled index rows enter with a progressing divider; the three-role passage uses bounded desktop pinning and reversible progress; document images drift by 12px without cropping lettering; headings/reading chapters use restrained position-driven entry; footer columns follow. Mobile removes role pinning. Controls remain stable. Reduced-motion and JavaScript failure retain readable content. Measurements are adaptation settings, not claimed exact private Framer settings.
+- Composition: direct owner-selected Monodrift identity, not prior KLCC/Athletic Index styling.
+- Readability: repaired nested document grid, spaced policy links, reserved heading entrance distance, wrapped long hashes.
+- Interaction: menu/Escape, disclosures, tabs, resource dialogs, video playback, required form validation checked.
+- Preservation:7 reading bodies text-identical; institutional CTAs and policies retained.
+- Motion: source cascade/manifesto reconstructed; secondary timings estimated. No verified source SFX.
+- Limit: independent reviewer assessed rendered frames, not continuous motion. Reduced-motion/no-JS implementation inspected, not browser-emulated. Owner acceptance remains pending.
 
-## Verification
-99 settled viewport captures: 11 routes × desktop 1440×960, tablet 820×1180, phone 390×844 × opening/middle/footer. No horizontal overflow or broken completed images in route checks. Static local links/assets resolve. Original reading content retained on eight routes; protected film CSS/JS hashes unchanged. Phone film progressed to frame61, then reversed to frame0, ready=true. Audience and audit selectors update correctly; menu opens and Escape dismisses. No real form message was sent. Independent reviewer checked all routes and four generated assets, and closed header contrast findings after live geometry measurement replaced stale header bounds.
-
-## Limits
-Viewport emulation is not physical-device testing. Private source/editor settings were not accessed. 510 indexed references are not 510 exhaustive audits; selected documented mechanisms are cited in reference-map.md. Reduced-motion and no-JS fallbacks inspected in code; not a claim of an exhaustive browser/device matrix. Owner acceptance remains open.
+See production/monodrift/COMPLETION.md and independent-review.md.
