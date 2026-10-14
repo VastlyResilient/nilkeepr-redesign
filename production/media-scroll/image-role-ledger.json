@@ -1,0 +1,42 @@
+[
+  {
+    "role": "home cascade 2",
+    "asset": "assets/athletic/disclosure.webp",
+    "sha256": "077eab74317cd4ecb64cb7716ba93a27c020979c95281ece56c35c8447719055"
+  },
+  {
+    "role": "home cascade 3",
+    "asset": "assets/athletic/access.webp",
+    "sha256": "b97c9b7b8959261ab85bd5db85859302d367b7ea38a5910fb4041977702d0713"
+  },
+  {
+    "role": "home cascade 4",
+    "asset": "assets/athletic/court-index.webp",
+    "sha256": "7dc5bfa66db4653d7f60219db88e031647c0610546e5893e5acb2e42dc72f1d7"
+  },
+  {
+    "role": "home cascade 5",
+    "asset": "assets/athletic/audit.webp",
+    "sha256": "a2f8647a7ad17b3eb447a67e9bd209f4452cc35da9ef79e7de5329e0bb959a91"
+  },
+  {
+    "role": "home cascade 6",
+    "asset": "assets/exhibition/opportunity.webp",
+    "sha256": "b6d42665c73e4e8ff51ce11a9f4046548fbd41e229fa63491b8ce4941c5730e6"
+  },
+  {
+    "role": "index editorial media",
+    "asset": "assets/source/school-compliance-explainer-poster.jpg",
+    "sha256": "1936358bd9813a9dfeba3547e4c48211cbc2385762d06acdfc837ed7c0980f33"
+  },
+  {
+    "role": "data-and-consent editorial media",
+    "asset": "assets/protection-scene.webp",
+    "sha256": "bb2f62c889294057cd0cd98cf946165fa7cde07a43c17ef971a512bafbdbf831"
+  },
+  {
+    "role": "about editorial media",
+    "asset": "assets/court-scene.webp",
+    "sha256": "1fde65f9366818fe9071cebe4faa846bcd60fe5f1321a2c77907a6ec58d8ed7a"
+  }
+]

@@ -22,3 +22,6 @@ Reconstruct https://monodrift.framer.website/ with NILKEEPR content. This direct
 
 ## Motion / evidence
 Use mono-source.css and mono-home.js from the validated local Monodrift reconstruction. Secondary timings are reconstructed estimates, not private editor settings. No verified independent UI sound effects. Existing NIL media only; no new generation spend. All 11 routes have desktop/tablet/mobile captures. See production/monodrift/independent-review.md.
+
+## Owner addition: distinct imagery / integrated scroll film
+Use production/media-scroll/image-role-ledger.json. Eight distinct editorial images; no reused illustration across unrelated placements. Semantic record compositions replace duplicate bitmaps while keeping source geometry. First cascade panel scrubs the existing144-frame film; phone gets a full-height sticky interval. Preserve0→end, stop, reverse and native-video fallback. See production/media-scroll/TEST-RESULTS.md for observed values and limits.

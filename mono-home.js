@@ -1,6 +1,6 @@
 
 (() => {
-const P = [{"t": "THE OPPORTUNITY", "l": "Opportunity", "m": "Athlete led", "n": "Student-led opportunity. A clearly defined school role.", "img": "assets/film/desktop/000.webp", "video": "assets/film/film.mp4", "href": "about.html"}, {"t": "THE DISCLOSURE", "l": "Disclosures", "m": "Start with the record", "n": "Self-reported activity, eligibility context and disclosure history.", "img": "assets/athletic/disclosure.webp", "href": "platform.html"}, {"t": "CONSENT FIRST", "l": "Consent", "m": "Recorded. Revocable.", "n": "Parent or guardian consent governs the school view for minors.", "img": "assets/athletic/access.webp", "href": "data-and-consent.html"}, {"t": "A DEFINED VIEW", "l": "School access", "m": "Read-only oversight", "n": "Schools observe relevant records. They do not manage the deal.", "img": "assets/athletic/court-index.webp", "href": "data-and-consent.html"}, {"t": "THE AUDIT TRAIL", "l": "Documentation", "m": "Context and continuity", "n": "Disclosure history, logged access and documentation for review.", "img": "assets/athletic/audit.webp", "href": "platform.html#capabilities"}, {"t": "YOUR NEXT STEP", "l": "Your institution", "m": "Make the connection", "n": "Explore the service with the NILKEEPR school team.", "img": "assets/athlete-scene.webp", "href": "contact.html"}];
+const P = [{"t": "THE OPPORTUNITY", "l": "Opportunity", "m": "Athlete led", "n": "Student-led opportunity. A clearly defined school role.", "img": "assets/film/desktop/000.webp", "video": "assets/film/film.mp4", "href": "about.html"}, {"t": "THE DISCLOSURE", "l": "Disclosures", "m": "Start with the record", "n": "Self-reported activity, eligibility context and disclosure history.", "img": "assets/athletic/disclosure.webp", "href": "platform.html"}, {"t": "CONSENT FIRST", "l": "Consent", "m": "Recorded. Revocable.", "n": "Parent or guardian consent governs the school view for minors.", "img": "assets/athletic/access.webp", "href": "data-and-consent.html"}, {"t": "A DEFINED VIEW", "l": "School access", "m": "Read-only oversight", "n": "Schools observe relevant records. They do not manage the deal.", "img": "assets/athletic/court-index.webp", "href": "data-and-consent.html"}, {"t": "THE AUDIT TRAIL", "l": "Documentation", "m": "Context and continuity", "n": "Disclosure history, logged access and documentation for review.", "img": "assets/athletic/audit.webp", "href": "platform.html#capabilities"}, {"t": "YOUR NEXT STEP", "l": "Your institution", "m": "Make the connection", "n": "Explore the service with the NILKEEPR school team.", "img": "assets/exhibition/opportunity.webp", "href": "contact.html"}];
 const ARR = '<svg viewBox="0 0 22 34" fill="none"><path fill="#161616" d="M21.155 18.385 5.54 34H0l16.344-16.344h4.811zm0-2.77v.73h-4.81L0 0h5.54z"/></svg>';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const params = new URLSearchParams(location.search);
@@ -39,7 +39,7 @@ const G = { leadVh: 100, crossVh: 120, edge1: .709, edge2: .884, leadInset: 40, 
 const clamp = (e) => e < 0 ? 0 : e > 1 ? 1 : e, lerp = (a, b, t) => a + (b - a) * t, eio = (e) => e < .5 ? 2 * e * e : 1 - (-2 * e + 2) ** 2 / 2;
 const panels = P.map((p, i) => {
   const wrap = document.createElement('div'); wrap.className = 'pwrap';
-  const media = p.video ? `<video src="${p.video}" poster="${p.img}" autoplay muted loop playsinline preload="auto"></video>` : `<img src="${p.img}" alt="" ${i < 2 ? 'loading="eager"' : ''} decoding="async" draggable="false">`;
+  const media = p.video ? `<canvas class="scroll-film" aria-label="NIL opportunity film controlled by scrolling"></canvas><video src="${p.video}" poster="${p.img}" muted playsinline controls preload="none"></video>` : `<img src="${p.img}" alt="" ${i < 2 ? 'loading="eager"' : ''} decoding="async" draggable="false">`;
   wrap.innerHTML = `<div class="pfix" style="z-index:${2 + i}"><div class="pclip" style="transform:translate3d(${i ? 100 : 0}vw,0,0)"><div class="pintro ${i === 0 ? 'introZoom' : ''}">
     <div class="scrim"></div>
     <div class="win"><div class="media">${media}</div></div>
@@ -87,7 +87,14 @@ function cascadeFrame() {
 
 /* ---------- Mobile stacked cards ---------- */
 const ms = document.getElementById('mstack');
-ms.innerHTML = P.map(p => `<article class="mcard">${p.video ? `<video src="${p.video}" poster="${p.img}" autoplay muted loop playsinline></video>` : `<img src="${p.img.replace('width=2000&height=1500', 'width=1000')}" alt="" loading="lazy">`}<div class="mc"><div class="ml">${p.l}</div><div class="mt">${p.m}</div><div class="md">${p.n}</div><a class="mb" href="${p.href}">${ARR}${p.m}</a></div></article>`).join('');
+ms.innerHTML = P.map(p => `<article class="mcard">${p.video ? `<canvas class="scroll-film" aria-label="NIL opportunity film controlled by scrolling"></canvas><video src="${p.video}" poster="${p.img}" muted playsinline controls></video>` : `<img src="${p.img.replace('width=2000&height=1500', 'width=1000')}" alt="" loading="lazy">`}<div class="mc"><div class="ml">${p.l}</div><div class="mt">${p.m}</div><div class="md">${p.n}</div><a class="mb" href="${p.href}">${ARR}${p.m}</a></div></article>`).join('');
+
+/* Film time follows the first panel, without replacing the source cascade. */
+const filmCanvases=[...document.querySelectorAll('.scroll-film')];
+const firstMobile=ms.querySelector('.mcard'), filmStage=document.createElement('div');filmStage.className='mobile-film-stage';firstMobile.before(filmStage);filmStage.appendChild(firstMobile);
+const cacheFrames=new Map();let lastFilm=-1,lastMode='',lastRendered=-1;
+function getFrame(i,mode){const key=mode+'/'+i;if(cacheFrames.has(key))return cacheFrames.get(key);const im=new Image();im.decoding='async';im.onerror=()=>{im.frameFailed=true};im.src=`assets/film/${mode}/${String(i).padStart(3,'0')}.webp`;cacheFrames.set(key,im);if(cacheFrames.size>48)cacheFrames.delete(cacheFrames.keys().next().value);return im;}
+function filmFrame(){if(reduced)return;const phone=innerWidth<1200,mode=phone?'mobile':'desktop',can=filmCanvases[phone?1:0];if(!can)return;const rect=filmStage.getBoundingClientRect();const progress=phone?clamp((70-rect.top)/Math.max(1,rect.height-firstMobile.offsetHeight)):clamp((scrollY-docTop0)/innerHeight);const frame=Math.round(progress*143);can.dataset.targetFrame=String(frame);const im=getFrame(frame,mode);[-2,-1,1,2,3,4].forEach(n=>getFrame(Math.max(0,Math.min(143,frame+n)),mode));if(im.frameFailed){can.classList.remove('ready');return;}if(!im.complete||!im.naturalWidth)return;if(frame===lastRendered&&mode===lastMode&&can.classList.contains('ready'))return;can.width=im.naturalWidth;can.height=im.naturalHeight;can.getContext('2d').drawImage(im,0,0);can.classList.add('ready');can.dataset.frame=String(frame);lastRendered=frame;lastMode=mode;lastFilm=progress;}
 
 /* ---------- Manifesto ---------- */
 const MAN = { track: innerWidth < 1200 ? 100 : 150, hold: .4, angle: 90, depth: 140, inertia: .1, jitter: .03, spread: .6, enter: 300, enterDur: 2, counterInset: 80 };
@@ -163,7 +170,7 @@ skip.addEventListener('click', () => { const r = man.getBoundingClientRect(), to
 
 /* ---------- Loop ---------- */
 measure(); addEventListener('resize', () => { measure(); panels.forEach(p => p._h = 0); }); addEventListener('load', measure);
-function loop(ts) { cascadeFrame(); manifestoFrame(ts); requestAnimationFrame(loop); }
+function loop(ts) { cascadeFrame(); filmFrame(); manifestoFrame(ts); requestAnimationFrame(loop); }
 requestAnimationFrame(loop);
 setTimeout(measure, 300);
 })();
