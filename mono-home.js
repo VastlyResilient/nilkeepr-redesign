@@ -2,6 +2,8 @@
 (() => {
 const P = [{"t": "THE OPPORTUNITY", "l": "Opportunity", "m": "Athlete led", "n": "Student-led opportunity. A clearly defined school role.", "img": "assets/film/desktop/000.webp", "video": "assets/film/film.mp4", "href": "about.html"}, {"t": "THE DISCLOSURE", "l": "Disclosures", "m": "Start with the record", "n": "Self-reported activity, eligibility context and disclosure history.", "img": "assets/athletic/disclosure.webp", "href": "platform.html"}, {"t": "CONSENT FIRST", "l": "Consent", "m": "Recorded. Revocable.", "n": "Parent or guardian consent governs the school view for minors.", "img": "assets/athletic/access.webp", "href": "data-and-consent.html"}, {"t": "A DEFINED VIEW", "l": "School access", "m": "Read-only oversight", "n": "Schools observe relevant records. They do not manage the deal.", "img": "assets/athletic/court-index.webp", "href": "data-and-consent.html"}, {"t": "THE AUDIT TRAIL", "l": "Documentation", "m": "Context and continuity", "n": "Disclosure history, logged access and documentation for review.", "img": "assets/athletic/audit.webp", "href": "platform.html#capabilities"}, {"t": "YOUR NEXT STEP", "l": "Your institution", "m": "Make the connection", "n": "Explore the service with the NILKEEPR school team.", "img": "assets/exhibition/opportunity.webp", "href": "contact.html"}];
 const ARR = '<svg viewBox="0 0 22 34" fill="none"><path fill="#161616" d="M21.155 18.385 5.54 34H0l16.344-16.344h4.811zm0-2.77v.73h-4.81L0 0h5.54z"/></svg>';
+let filmReduced=false;try{filmReduced=localStorage.getItem('nil-film-static')==='true'}catch{}
+document.documentElement.classList.toggle('film-static',filmReduced);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const params = new URLSearchParams(location.search);
 const noLoader = params.has('noloader');
@@ -78,15 +80,17 @@ function getFrame(i,mode){const key=mode+'/'+i;if(frameCache.has(key))return fra
 function filmFrame(){
  const rect=hero.getBoundingClientRect(), p=clamp(-rect.top/Math.max(1,hero.offsetHeight-pin.offsetHeight));
  hero.dataset.progress=p.toFixed(4);
- beats.forEach((el,i)=>{const [a,b]=windows[i],t=reduced?1:clamp((p-a)/(b-a));el.style.opacity=t;el.style.transform=`translateY(${(1-t)*20}px)`;el.style.clipPath=`inset(${(1-t)*100}% 0 0 0)`;if(el.matches('a')){el.tabIndex=t===1?0:-1;el.style.pointerEvents=t===1?'auto':'none';}});
- hero.querySelector('.film-cue').style.opacity=reduced||p>.12?'0':'1';hero.querySelector('.film-progress').style.transform=`scaleX(${p})`;
- if(reduced)return;
+ beats.forEach((el,i)=>{const [a,b]=windows[i],t=filmReduced?1:clamp((p-a)/(b-a));el.style.opacity=t;el.style.transform=`translateY(${(1-t)*20}px)`;el.style.clipPath=`inset(${(1-t)*100}% 0 0 0)`;if(el.matches('a')){el.tabIndex=t===1?0:-1;el.style.pointerEvents=t===1?'auto':'none';}});
+ hero.querySelector('.film-cue').style.opacity=filmReduced||p>.12?'0':'1';hero.querySelector('.film-progress').style.transform=`scaleX(${p})`;
+ if(filmReduced)return;
  const mode=innerWidth/innerHeight<1?'mobile':'desktop',frame=Math.round(clamp(p/.9)*143);can.dataset.targetFrame=frame;
  const im=getFrame(frame,mode);[-2,-1,1,2,3,4].forEach(n=>getFrame(Math.max(0,Math.min(143,frame+n)),mode));
  if(im.failed){can.classList.remove('ready');return;}if(!im.complete||!im.naturalWidth)return;
  if(frame===lastRendered&&mode===lastMode&&can.classList.contains('ready'))return;
  can.width=im.naturalWidth;can.height=im.naturalHeight;can.getContext('2d').drawImage(im,0,0);can.classList.add('ready');can.dataset.frame=frame;lastRendered=frame;lastMode=mode;
 }
+
+const motionButton=document.createElement('button');motionButton.className='film-motion-choice';motionButton.textContent=filmReduced?'Enable scroll film':'Use still introduction';motionButton.addEventListener('click',()=>{filmReduced=!filmReduced;try{localStorage.setItem('nil-film-static',String(filmReduced))}catch{}document.documentElement.classList.toggle('film-static',filmReduced);motionButton.textContent=filmReduced?'Enable scroll film':'Use still introduction';lenis?.resize();measure();});document.querySelector('#mono-menu').appendChild(motionButton);
 
 /* ---------- Manifesto ---------- */
 const MAN = { track: innerWidth < 1200 ? 100 : 150, hold: .4, angle: 90, depth: 140, inertia: .1, jitter: .03, spread: .6, enter: 300, enterDur: 2, counterInset: 80 };

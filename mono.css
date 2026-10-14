@@ -32,3 +32,20 @@
 
 @media(min-width:701px) and (max-height:750px){.landing-copy h1{font-size:clamp(32px,7vh,58px);margin:14px 0}.landing-copy{bottom:8%}.film-description{font-size:13px}.film-action{margin-top:6px;padding:10px 0}}
 @media(max-height:550px) and (orientation:landscape){.landing-pin{min-height:0}.landing-copy{bottom:8%;left:24px}.landing-copy h1{font-size:28px;line-height:1.02;margin:8px 0}.film-kicker{font-size:9px}.film-description{font-size:11px;max-width:430px}.film-action{font-size:14px;padding:6px 0;margin-top:4px}.film-cue{bottom:10px}}
+
+/* Core scroll film is automatic; OS preference still calms decorative motion.
+   A visitor can explicitly choose a still from the menu. */
+html:not(.film-static) #landing-film{height:360svh}
+html:not(.film-static) .landing-pin{position:sticky;height:100svh}
+html:not(.film-static) .landing-pin>.scroll-film{display:block}
+html:not(.film-static) .landing-pin>.scroll-film.ready+video{visibility:hidden!important}
+html:not(.film-static) .film-progress,html:not(.film-static) .film-cue{display:block}
+html:not(.film-static) .landing-copy{bottom:10%}
+@media(max-width:700px){html:not(.film-static) #landing-film{height:400svh}html:not(.film-static) .landing-copy{bottom:9%}}
+@media(max-height:550px) and (orientation:landscape){html:not(.film-static) .landing-copy{bottom:8%}}
+html.film-static #landing-film{height:auto}html.film-static .landing-pin{position:relative;min-height:780px}html.film-static .landing-pin>canvas{display:none}html.film-static .landing-pin>video{visibility:visible!important}html.film-static .film-cue,html.film-static .film-progress{display:none}
+.film-motion-choice{background:none;color:#fff;border:1px solid #555;padding:12px;text-align:left;font-size:12px}
+html:not(.film-static) .landing-pin{min-height:560px}
+@media(max-width:700px){html:not(.film-static) .landing-pin{min-height:500px}}
+@media(max-height:550px) and (orientation:landscape){html:not(.film-static) .landing-pin{min-height:0}}
+#mono-menu{overflow-y:auto;overscroll-behavior:contain}#mono-menu>*{flex-shrink:0}
