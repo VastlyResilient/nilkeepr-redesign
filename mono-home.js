@@ -10,41 +10,21 @@ const noLoader = params.has('noloader');
 let lenis = null;
 if (window.Lenis && !reduced) { lenis = new Lenis({ duration: 1.8, smoothWheel: true }); window.lenis = lenis; const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
 
-/* ---------- Loader timeline ---------- */
-const loader = document.getElementById('loader');
 const root = document.documentElement;
-const h1 = document.querySelector('.h1');
-(() => { const out = []; h1.childNodes.forEach(n => { if (n.nodeType === 3) n.textContent.split(/(\s+)/).forEach(t => { if (!t) return; if (/^\s+$/.test(t)) out.push(document.createTextNode(' ')); else { const w = document.createElement('span'); w.className = 'w'; w.textContent = t; out.push(w); } }); else { const w = document.createElement('span'); w.className = 'w'; w.appendChild(n.cloneNode(true)); out.push(w); } }); h1.replaceChildren(...out); })();
-function playHeadline(immediate) { const ws = h1.querySelectorAll('.w'); if (immediate) { h1.classList.remove('pre'); return; } ws.forEach((w, i) => { w.style.transitionDelay = (1.7 + i * .04) + 's'; }); h1.classList.add('play'); }
-if (!noLoader && !reduced) h1.classList.add('pre');
-function startIntro() { document.querySelectorAll('.introZoom,.introCard').forEach(e => e.classList.add('go')); playHeadline(false); }
-if (noLoader) { loader.remove(); requestAnimationFrame(() => document.querySelectorAll('.introZoom,.introCard').forEach(e => { e.style.transition = 'none'; e.classList.add('go'); })); }
-else {
-  root.style.overflow = 'hidden'; lenis && lenis.stop();
-  // MOUNT_DELAY stands in for Framer's hydration time (~0.45s after first paint, estimated from the timed probe):
-  // both the loader and the cascade intro start counting from component mount in the original.
-  const MOUNT_DELAY = 450, HOLD = 1330; // HOLD = max(.15+durIn, .33+durIn) + hold(0)
-  const release = () => { if (loader.classList.contains('reveal')) return; loader.classList.add('reveal'); root.style.overflow = ''; lenis && lenis.start(); setTimeout(() => loader.remove(), 1000 + 300 + 250); };
-  setTimeout(() => {
-    loader.classList.add('in'); startIntro();
-    setTimeout(release, HOLD);
-    ['wheel', 'touchmove', 'keydown'].forEach(ev => addEventListener(ev, release, { once: true, passive: true }));
-  }, MOUNT_DELAY);
-}
-
+P.shift(); // Film now owns the opening; do not repeat it in the gallery.
 /* ---------- Nav accent dot cycles the template's swatches (estimated cadence) ---------- */
 /* ---------- Cascade ---------- */
 const casc = document.getElementById('cascade');
-const G = { leadVh: 100, crossVh: 120, edge1: .709, edge2: .884, leadInset: 40, zoom: 1.1, thumbAspect: 1.375, settle: .05 };
+const G = { leadVh: 100, crossVh: 120, edge1: .709, edge2: .884, leadInset: 0, zoom: 1.1, thumbAspect: 1.375, settle: .05 };
 const clamp = (e) => e < 0 ? 0 : e > 1 ? 1 : e, lerp = (a, b, t) => a + (b - a) * t, eio = (e) => e < .5 ? 2 * e * e : 1 - (-2 * e + 2) ** 2 / 2;
 const panels = P.map((p, i) => {
   const wrap = document.createElement('div'); wrap.className = 'pwrap';
   const media = p.video ? `<canvas class="scroll-film" aria-label="NIL opportunity film controlled by scrolling"></canvas><video src="${p.video}" poster="${p.img}" muted playsinline controls preload="none"></video>` : `<img src="${p.img}" alt="" ${i < 2 ? 'loading="eager"' : ''} decoding="async" draggable="false">`;
-  wrap.innerHTML = `<div class="pfix" style="z-index:${2 + i}"><div class="pclip" style="transform:translate3d(${i ? 100 : 0}vw,0,0)"><div class="pintro ${i === 0 ? 'introZoom' : ''}">
+  wrap.innerHTML = `<div class="pfix" style="z-index:${2 + i}"><div class="pclip" style="transform:translate3d(${i ? 100 : 0}vw,0,0)"><div class="pintro ">
     <div class="scrim"></div>
     <div class="win"><div class="media">${media}</div></div>
     ${i > 0 ? `<div class="queue"><span class="qlabel">${p.l}</span><span class="qnum">${i + 1}</span></div>` : ''}
-    <div class="counter"><div class="${i === 0 ? 'introCard' : ''}" style="position:absolute;inset:0"><a class="card" href="${p.href}"><div class="cwrap"><span class="cnt">${i + 1}<i></i>${P.length}</span><span class="ttl">${p.t}</span><span class="note">${p.n}</span></div><span class="arr">${ARR}</span></a></div></div>
+    <div class="counter"><div class="" style="position:absolute;inset:0"><a class="card" href="${p.href}"><div class="cwrap"><span class="cnt">${i + 1}<i></i>${P.length}</span><span class="ttl">${p.t}</span><span class="note">${p.n}</span></div><span class="arr">${ARR}</span></a></div></div>
   </div></div></div>`;
   casc.appendChild(wrap);
   return { wrap, fix: wrap.querySelector('.pfix'), clip: wrap.querySelector('.pclip'), win: wrap.querySelector('.win'), media: wrap.querySelector('.media'), queue: wrap.querySelector('.queue'), label: wrap.querySelector('.qlabel'), counter: wrap.querySelector('.counter') };
@@ -89,12 +69,24 @@ function cascadeFrame() {
 const ms = document.getElementById('mstack');
 ms.innerHTML = P.map(p => `<article class="mcard">${p.video ? `<canvas class="scroll-film" aria-label="NIL opportunity film controlled by scrolling"></canvas><video src="${p.video}" poster="${p.img}" muted playsinline controls></video>` : `<img src="${p.img.replace('width=2000&height=1500', 'width=1000')}" alt="" loading="lazy">`}<div class="mc"><div class="ml">${p.l}</div><div class="mt">${p.m}</div><div class="md">${p.n}</div><a class="mb" href="${p.href}">${ARR}${p.m}</a></div></article>`).join('');
 
-/* Film time follows the first panel, without replacing the source cascade. */
-const filmCanvases=[...document.querySelectorAll('.scroll-film')];
-const firstMobile=ms.querySelector('.mcard'), filmStage=document.createElement('div');filmStage.className='mobile-film-stage';firstMobile.before(filmStage);filmStage.appendChild(firstMobile);
-const cacheFrames=new Map();let lastFilm=-1,lastMode='',lastRendered=-1;
-function getFrame(i,mode){const key=mode+'/'+i;if(cacheFrames.has(key))return cacheFrames.get(key);const im=new Image();im.decoding='async';im.onerror=()=>{im.frameFailed=true};im.src=`assets/film/${mode}/${String(i).padStart(3,'0')}.webp`;cacheFrames.set(key,im);if(cacheFrames.size>48)cacheFrames.delete(cacheFrames.keys().next().value);return im;}
-function filmFrame(){if(reduced)return;const phone=innerWidth<1200,mode=phone?'mobile':'desktop',can=filmCanvases[phone?1:0];if(!can)return;const rect=filmStage.getBoundingClientRect();const progress=phone?clamp((70-rect.top)/Math.max(1,rect.height-firstMobile.offsetHeight)):clamp((scrollY-docTop0)/innerHeight);const frame=Math.round(progress*143);can.dataset.targetFrame=String(frame);const im=getFrame(frame,mode);[-2,-1,1,2,3,4].forEach(n=>getFrame(Math.max(0,Math.min(143,frame+n)),mode));if(im.frameFailed){can.classList.remove('ready');return;}if(!im.complete||!im.naturalWidth)return;if(frame===lastRendered&&mode===lastMode&&can.classList.contains('ready'))return;can.width=im.naturalWidth;can.height=im.naturalHeight;can.getContext('2d').drawImage(im,0,0);can.classList.add('ready');can.dataset.frame=String(frame);lastRendered=frame;lastMode=mode;lastFilm=progress;}
+/* Primary film: scroll drives frames AND separated copy windows. */
+const hero=document.getElementById('landing-film'), pin=hero.querySelector('.landing-pin'), can=hero.querySelector('canvas');
+const beats=[...hero.querySelectorAll('.film-kicker,.film-line,.film-description,.film-action')];
+const windows=[[.08,.14],[.17,.25],[.30,.39],[.44,.55],[.61,.72],[.80,.88]];
+const frameCache=new Map();let lastRendered=-1,lastMode='';
+function getFrame(i,mode){const key=mode+'/'+i;if(frameCache.has(key))return frameCache.get(key);const im=new Image();im.decoding='async';im.onerror=()=>{im.failed=true};im.src=`assets/film/${mode}/${String(i).padStart(3,'0')}.webp`;frameCache.set(key,im);if(frameCache.size>48)frameCache.delete(frameCache.keys().next().value);return im;}
+function filmFrame(){
+ const rect=hero.getBoundingClientRect(), p=clamp(-rect.top/Math.max(1,hero.offsetHeight-pin.offsetHeight));
+ hero.dataset.progress=p.toFixed(4);
+ beats.forEach((el,i)=>{const [a,b]=windows[i],t=reduced?1:clamp((p-a)/(b-a));el.style.opacity=t;el.style.transform=`translateY(${(1-t)*20}px)`;el.style.clipPath=`inset(${(1-t)*100}% 0 0 0)`;if(el.matches('a')){el.tabIndex=t===1?0:-1;el.style.pointerEvents=t===1?'auto':'none';}});
+ hero.querySelector('.film-cue').style.opacity=reduced||p>.12?'0':'1';hero.querySelector('.film-progress').style.transform=`scaleX(${p})`;
+ if(reduced)return;
+ const mode=innerWidth/innerHeight<1?'mobile':'desktop',frame=Math.round(clamp(p/.9)*143);can.dataset.targetFrame=frame;
+ const im=getFrame(frame,mode);[-2,-1,1,2,3,4].forEach(n=>getFrame(Math.max(0,Math.min(143,frame+n)),mode));
+ if(im.failed){can.classList.remove('ready');return;}if(!im.complete||!im.naturalWidth)return;
+ if(frame===lastRendered&&mode===lastMode&&can.classList.contains('ready'))return;
+ can.width=im.naturalWidth;can.height=im.naturalHeight;can.getContext('2d').drawImage(im,0,0);can.classList.add('ready');can.dataset.frame=frame;lastRendered=frame;lastMode=mode;
+}
 
 /* ---------- Manifesto ---------- */
 const MAN = { track: innerWidth < 1200 ? 100 : 150, hold: .4, angle: 90, depth: 140, inertia: .1, jitter: .03, spread: .6, enter: 300, enterDur: 2, counterInset: 80 };

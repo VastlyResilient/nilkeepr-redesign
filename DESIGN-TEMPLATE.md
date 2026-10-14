@@ -25,3 +25,6 @@ Use mono-source.css and mono-home.js from the validated local Monodrift reconstr
 
 ## Owner addition: distinct imagery / integrated scroll film
 Use production/media-scroll/image-role-ledger.json. Eight distinct editorial images; no reused illustration across unrelated placements. Semantic record compositions replace duplicate bitmaps while keeping source geometry. First cascade panel scrubs the existing144-frame film; phone gets a full-height sticky interval. Preserve0→end, stop, reverse and native-video fallback. See production/media-scroll/TEST-RESULTS.md for observed values and limits.
+
+## Primary landing film — October 14 owner revision
+Replace the initial split column with a continuous full-viewport film. Structural motion: existing approved pinned-film fixture; typography/mint/geometry: existing Monodrift reconstruction. No new unverified reference or media. 360svh desktop / 400svh phone; frame0 at rest; six copy windows at8–14,17–25,30–39,44–55,61–72,80–88 percent; complete film at90 percent and hold. Reverse deterministic. Native video and semantic content remain failure/reduced-motion fallback. Five subsequent cascade records retain their geometry with zero lead inset; no duplicate film.
