@@ -49,3 +49,11 @@ html:not(.film-static) .landing-pin{min-height:560px}
 @media(max-width:700px){html:not(.film-static) .landing-pin{min-height:500px}}
 @media(max-height:550px) and (orientation:landscape){html:not(.film-static) .landing-pin{min-height:0}}
 #mono-menu{overflow-y:auto;overscroll-behavior:contain}#mono-menu>*{flex-shrink:0}
+
+/* Same scroll-driven gallery on phones; native touch controls its progress. */
+html:not(.film-static) .mono-home #cascade{display:block!important}
+html:not(.film-static) .mono-home #mstack{display:none!important}
+@media(max-width:1199px){.mono-home .card{width:90vw;min-height:150px;padding:22px 20px}.mono-home .card .ttl{font-size:27px}.mono-home .card .note{font-size:11px}.mono-home .card .cwrap{padding-right:30px;gap:13px}.mono-home .card .arr{width:16px;right:20px}.mono-home .qnum{font-size:80px}.mono-home .pfix{height:calc(100svh + 1px)}}
+
+.phone-gallery-caption{display:none}@media(max-width:1199px){.mono-home .counter{display:none}.phone-gallery-caption{display:block;position:fixed;bottom:0;left:0;width:100%;z-index:9}.phone-gallery-caption .card{position:relative;max-width:none;width:100%;bottom:0;min-height:150px;clip-path:none;pointer-events:inherit}}
+html.film-static .mono-home #cascade{display:none!important}html.film-static .mono-home #mstack{display:block!important}html.film-static .phone-gallery-caption{display:none!important}

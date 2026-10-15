@@ -10,7 +10,7 @@ const noLoader = params.has('noloader');
 
 /* ---------- Lenis (Framer Lenis component: intensity 18 -> duration 1.8) ---------- */
 let lenis = null;
-if (window.Lenis && !reduced) { lenis = new Lenis({ duration: 1.8, smoothWheel: true }); window.lenis = lenis; const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
+if (window.Lenis && !reduced && matchMedia('(hover: hover) and (pointer: fine)').matches) { lenis = new Lenis({ duration: 1.8, smoothWheel: true }); window.lenis = lenis; const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf); }
 
 const root = document.documentElement;
 P.shift(); // Film now owns the opening; do not repeat it in the gallery.
@@ -31,11 +31,12 @@ const panels = P.map((p, i) => {
   casc.appendChild(wrap);
   return { wrap, fix: wrap.querySelector('.pfix'), clip: wrap.querySelector('.pclip'), win: wrap.querySelector('.win'), media: wrap.querySelector('.media'), queue: wrap.querySelector('.queue'), label: wrap.querySelector('.qlabel'), counter: wrap.querySelector('.counter') };
 });
+const phoneCaption=document.createElement('div');phoneCaption.className='phone-gallery-caption';casc.appendChild(phoneCaption);let captionIndex=-1;
 const nav = document.getElementById('nav');
 let docTop0 = 0;
 function measure() { docTop0 = casc.getBoundingClientRect().top + scrollY; }
 function cascadeFrame() {
-  if (innerWidth < 1200 || reduced) return;
+  if (filmReduced) return;
   const vh = innerHeight, vw = innerWidth, M = vh + 1, N = G.leadVh / 100 * vh, Pc = G.crossVh / 100 * vh, r = P.length, F = N + (r - 1) * Pc;
   panels.forEach((pn, n) => { const h = n === 0 ? N : n === r - 1 ? Pc + vh : Pc; if (pn._h !== h) { pn._h = h; pn.wrap.style.height = h + 'px'; } });
   const maxS = Math.max(0, document.documentElement.scrollHeight - vh);
@@ -44,6 +45,7 @@ function cascadeFrame() {
   const a = Math.max(0, Math.min(F, z));
   const U = Math.min(a / (1 - G.settle), F);
   const W = (e) => { const s = e === 0 ? 0 : N + (e - 1) * Pc, L = e === 0 ? N : Pc; return eio(clamp((U - s) / L)); };
+  if(innerWidth<1200){let active=0;for(let i=1;i<r;i++)if(W(i)>.8)active=i;if(active!==captionIndex){const p=P[active];phoneCaption.innerHTML=`<a class="card" href="${p.href}"><span class="cnt">${active+1} / ${r}</span><span class="ttl">${p.t}</span><span class="note">${p.n}</span></a>`;captionIndex=active;}const opacity=(active<r-1?1-clamp(W(active+1)/.3):1);phoneCaption.style.opacity=z<0||z>F?0:opacity;phoneCaption.style.pointerEvents=z>=0&&z<=F&&opacity>.95?'auto':'none';phoneCaption.querySelector('a').tabIndex=z>=0&&z<=F&&opacity>.95?0:-1;}
   const ae = (e) => { if (e <= 0) return 0; let t; if (e === 1) { t = lerp(1, G.edge1, W(0)); t = lerp(t, 0, W(1)); } else { t = lerp(1, G.edge2, W(e - 2)); t = lerp(t, G.edge1, W(e - 1)); t = lerp(t, 0, W(e)); } return t; };
   const oe = Math.round(G.leadInset / 100 * vw * (1 - W(0))), Gw = Math.max(1, vw - oe);
   root.style.setProperty('--cascade-inset', oe + 'px'); root.style.setProperty('--cascade-lead', W(0).toFixed(4));
@@ -53,6 +55,7 @@ function cascadeFrame() {
     const K = ae(n), q = K * Gw;
     pn.clip.style.transform = `translate3d(${q}px, 0, 0)`; pn.clip.style.pointerEvents = K < .98 ? 'auto' : 'none';
     pn.counter.style.transform = `translate3d(${-q}px, 0, 0)`;
+    const caption=innerWidth<1200?(n===0?1:clamp((W(n)-.65)/.2))*(n<r-1?1-clamp(W(n+1)/.3):1):1;pn.counter.style.opacity=caption;pn.counter.querySelector('a').tabIndex=caption>.95?0:-1;pn.counter.querySelector('a').style.pointerEvents=caption>.95?'auto':'none';
     const ce = n === 0 ? 1 : W(n), le = clamp(ce / .35), ue = le * le * (3 - 2 * le), de = n === 0 ? W(0) : ce, J = lerp(G.zoom, 1, de);
     pn.media.style.width = vw + 'px'; pn.media.style.height = M + 'px';
     let w = Gw, h = M, s = (Gw - vw) / 2;
