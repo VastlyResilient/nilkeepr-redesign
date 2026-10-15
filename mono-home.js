@@ -4,7 +4,7 @@ const P = [{"t": "THE OPPORTUNITY", "l": "Opportunity", "m": "Athlete led", "n":
 const ARR = '<svg viewBox="0 0 22 34" fill="none"><path fill="#161616" d="M21.155 18.385 5.54 34H0l16.344-16.344h4.811zm0-2.77v.73h-4.81L0 0h5.54z"/></svg>';
 let filmReduced=false;try{filmReduced=localStorage.getItem('nil-film-static')==='true'}catch{}
 document.documentElement.classList.toggle('film-static',filmReduced);
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = filmReduced;document.documentElement.classList.toggle('motion-reduced',reduced);
 const params = new URLSearchParams(location.search);
 const noLoader = params.has('noloader');
 
@@ -93,7 +93,7 @@ function filmFrame(){
  can.width=im.naturalWidth;can.height=im.naturalHeight;can.getContext('2d').drawImage(im,0,0);can.classList.add('ready');can.dataset.frame=frame;lastRendered=frame;lastMode=mode;
 }
 
-const motionButton=document.createElement('button');motionButton.className='film-motion-choice';motionButton.textContent=filmReduced?'Enable scroll film':'Use still introduction';motionButton.addEventListener('click',()=>{filmReduced=!filmReduced;try{localStorage.setItem('nil-film-static',String(filmReduced))}catch{}document.documentElement.classList.toggle('film-static',filmReduced);motionButton.textContent=filmReduced?'Enable scroll film':'Use still introduction';lenis?.resize();measure();});document.querySelector('#mono-menu').appendChild(motionButton);
+const motionButton=document.createElement('button');motionButton.className='film-motion-choice';motionButton.textContent=filmReduced?'Enable full motion':'Reduce motion';motionButton.addEventListener('click',()=>{filmReduced=!filmReduced;try{localStorage.setItem('nil-film-static',String(filmReduced))}catch{}document.documentElement.classList.toggle('film-static',filmReduced);motionButton.textContent=filmReduced?'Enable full motion':'Reduce motion';location.reload();});document.querySelector('#mono-menu').appendChild(motionButton);
 
 /* ---------- Manifesto ---------- */
 const MAN = { track: innerWidth < 1200 ? 100 : 150, hold: .4, angle: 90, depth: 140, inertia: .1, jitter: .03, spread: .6, enter: 300, enterDur: 2, counterInset: 80 };
@@ -155,7 +155,8 @@ function manifestoFrame(ts) {
   segs.forEach(([a, b], n) => { if (h >= b) shown = n + 1; else if (h >= a) { act = n; x = (h - a) / (b - a); } });
   for (let e = 0; e < nS; e++) { if (act >= 0) stmtState(e, e === act + 1 ? 'in' : e === act ? 'out' : 'hidden', x); else stmtState(e, e === shown ? 'shown' : 'hidden', 0); }
   prog.style.transform = `scaleX(${h.toFixed(4)})`;
-  const br = block.getBoundingClientRect(), vis = br.top < vh * .8 && br.bottom > vh * .05, gone = rect.bottom <= 0 || rect.top >= vh;
+  const br = block.getBoundingClientRect(), vis = rect.top < vh * .65 && rect.bottom > vh * .35, gone = rect.bottom <= 0 || rect.top >= vh;
+  if (entered === null && vis) { block.style.transform='translate3d(0,0,0)';block.style.opacity='1';entered=true; }
   if (entered === null) { if (!vis) { block.style.transition = 'none'; block.style.transform = `translate3d(0, ${MAN.enter}px, 0)`; block.style.opacity = '0'; } entered = vis; }
   else if (vis && !entered) { block.style.transition = `transform ${MAN.enterDur}s cubic-bezier(0.16, 1, 0.3, 1), opacity ${MAN.enterDur * .8}s ease-out`; block.style.transform = 'translate3d(0,0,0)'; block.style.opacity = '1'; entered = true; }
   else if (gone && entered) { block.style.transition = 'none'; block.style.transform = `translate3d(0, ${MAN.enter}px, 0)`; block.style.opacity = '0'; entered = false; }

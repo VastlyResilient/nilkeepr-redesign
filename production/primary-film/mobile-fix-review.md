@@ -6,12 +6,14 @@ The screenshot at 390 × 844 shows a visible film frame, progress bar, kicker an
 
 The JavaScript now separates the primary film from the OS reduced-motion preference, while retaining that preference for Lenis/cascade/manifesto effects. Local storage access is guarded. The menu focus trap queries links and buttons dynamically, so the newly appended film control participates correctly. The button labels describe their next action and the control preserves the visitor choice. Cache versions for the home stylesheet/script are updated.
 
-## Findings requiring resolution
+## Findings — resolved after review
 
 1. **P2 — Reduced-motion minimum height remains on short phones.** `html:not(.film-static) .landing-pin` restores sticky positioning and `height:100svh`, but does not override the existing reduced-motion `min-height:780px`. At a portrait viewport such as 375 × 667, the automatic film retains a pin taller than the viewport; final copy/CTA can extend below the fold. Reset the minimum height for the automatic branch to match the normal desktop/mobile/landscape values, and verify at a short portrait viewport.
 
 2. **P2 — Still-introduction control can overflow the fixed menu.** The new control is appended below seven navigation links, the promotional feature and two contact links. `#mono-menu` is fixed between 70px and the viewport bottom, with no vertical scrolling. Its content can exceed the available height, especially at 375 × 667 or landscape, leaving the newly offered still control below the visible screen. Make the menu vertically scrollable, preserve adequate button size, and test reachability by touch and keyboard.
 
-## Remaining evidence
+## Closure
 
-Verify these repairs in rendered short-phone and landscape states, plus still/film toggling and persistence. Physical iPhone Safari and the deployed revision remain outside this review. This report is not owner acceptance.
+Independently re-read the final CSS after repair. Both source findings are resolved: the automatic film explicitly restores minimum heights of 560px desktop, 500px mobile and 0 in short landscape; the menu now uses `overflow-y:auto`, `overscroll-behavior:contain`, and nonshrinking children. The parent reports a real-browser forced-reduced-motion test at 375 × 667 with measured pin height 667px, successful selection of both film modes, and menu closure. This browser evidence was reported by the parent, not independently executed by this reviewer.
+
+No unresolved source findings remain in this narrow fix review. Physical iPhone Safari, persistence after reload, rendered landscape operation and the deployed revision remain outside this review. This report is not owner acceptance.
